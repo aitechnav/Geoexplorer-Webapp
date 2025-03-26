@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoExplorer AI</title>
+    <link rel="icon" href="assets/icons/icon.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="header">
+        <div class="logo-container">
+            <img src="assets/icons/icon.jpeg" alt="GeoExplorer AI Logo" class="logo-image" width="30" height="30">
+        </div>
+        <h1>GeoExplorer AI</h1>
+        <div id="mapTypeToggle">
+            <select id="mapStyle">
+                <option value="default">Default Map</option>
+                <option value="satellite">Satellite</option>
+                <option value="terrain">Terrain</option>
+                <option value="night">Night Mode</option>
+                <option value="retro">Retro</option>
+                <option value="silver">Silver</option>
+            </select>
+        </div>
+    </div>
+    
+    <div id="content">
+        <div id="map"></div>
+        
+        <div id="sidebar">
+            <div class="control-panel">
+                <h3>Location Controls</h3>
+                <input id="locationSearch" type="text" placeholder="Search for a location">
+                <button id="searchButton">Search</button>
+                <div id="locationInfo">
+                    <p id="coordinatesDisplay">Click on the map to see information</p>
+                    <p id="addressDisplay"></p>
+                </div>
+                <button id="saveLocation" disabled>Save This Location</button>
+            </div>
+            
+            <div class="control-panel">
+                <h3>Map Layers</h3>
+                <div>
+                    <input type="checkbox" id="trafficLayer">
+                    <label for="trafficLayer">Traffic</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="transitLayer">
+                    <label for="transitLayer">Transit</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="bicyclingLayer">
+                    <label for="bicyclingLayer">Bicycling</label>
+                </div>
+            </div>
+            
+            <div class="control-panel">
+                <h3>Saved Locations</h3>
+                <div id="savedLocations">
+                    <p>No saved locations yet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load scripts in correct order -->
+    <script>
+        // Define global configuration
+        const CONFIG = {
+            googleMapsApiKey: '',
+            geminiApiKey: ''
+        };
+        
+        // Global variables - declare them ONLY HERE
+        let map;
+        let infoWindow;
+        let geocoder;
+        let currentMarker = null;
+        let currentPosition = null;
+        let savedLocations = [];
+        let trafficLayer, transitLayer, bicyclingLayer;
+    </script>
+    <script src="css/map-styles.js"></script>
+    <script src="js/api-service.js"></script>
+    <script src="js/map-config.js"></script>
+    <script src="js/location-manager.js"></script>
+    <script src="js/ui-controller.js"></script>
+    <script src="js/chat-interface.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!-- Load the Google Maps JavaScript API properly with async -->
+    <script 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9J4NFmNgAKjtQ-tIjY9yw31x7Vxv1mus&libraries=places&callback=initMap" 
+        async defer
+    ></script>
+</body>
+</html>
