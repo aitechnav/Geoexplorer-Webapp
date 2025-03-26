@@ -1,2 +1,2 @@
-# geoexplorer-chrome-extension
-geoexplorer-chrome-extension
+# geoexplorer-webapp
+
