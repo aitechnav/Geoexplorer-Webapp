@@ -9,6 +9,7 @@ any location you click on.
 
 The application is built entirely with vanilla JavaScript, HTML, and CSS—no frameworks or complex dependencies. This makes it an
 ideal example project for learning how to integrate different APIs and services.
+
 ```
 
 # Repository structure 
@@ -26,6 +27,14 @@ ideal example project for learning how to integrate different APIs and services.
 │   ├── api-service.js       # API communication
 │   └── chat-interface.js    # AI chat functionality
 ```
-This repository was created for Hudson Valley Open Data Hackathon 2025 Unlocking Public Data Insights with Open Source and AI
+
+**Technologies Used:**
+- Google Maps JavaScript API
+- Google Gemini AI API (generative AI)
+- Geocoding & Reverse Geocoding
+- Browser localStorage for persistence
+- Responsive design for mobile compatibility
+
+This repository was created for Hudson Valley Open Data Hackathon 2025 - Unlocking Public Data Insights with Open Source and AI
 More Info: https://hvtechfest.com/session/ai-powered-location-insights-using-google-gemini-api-smart-descriptions
 
