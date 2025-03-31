@@ -35,6 +35,6 @@ ideal example project for learning how to integrate different APIs and services.
 - Browser localStorage for persistence
 - Responsive design for mobile compatibility
 
-This repository was created for Hudson Valley Open Data Hackathon 2025 - Unlocking Public Data Insights with Open Source and AI
+This repository was created for talk at Hudson Valley Open Data Hackathon 2025 - Unlocking Public Data Insights with Open Source and AI
 More Info: https://hvtechfest.com/session/ai-powered-location-insights-using-google-gemini-api-smart-descriptions
 
